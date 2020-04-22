@@ -1,0 +1,56 @@
+2020-03-30 17:05:21:735 grammar LogManager.java:25 before: (COMBINED_GRAMMAR binario_decimal (RULES (RULE varios (BLOCK (ALT (+ (BLOCK (ALT convertir)))))) (RULE convertir (BLOCK (ALT (= n BINARIO) {
+                String bin=$n.text;
+                int exp=2;
+                int decimal=0;
+                for (int n = bin.length(); n >=0; n--) 
+                { 
+                    char c = bin.charAt (n);
+                    decimal+=Integer.parseInt(c) * exp;
+                    exp*=2; 
+                }
+                System.out.println("decimal: "+decimal);
+            }))) (RULE BINARIO (BLOCK (ALT (+ (BLOCK (ALT [01])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\r\n]) skip)))))
+2020-03-30 17:05:21:745 grammar LogManager.java:25 after: (COMBINED_GRAMMAR binario_decimal (RULES (RULE varios (BLOCK (ALT (+ (BLOCK (ALT convertir)))))) (RULE convertir (BLOCK (ALT (= n BINARIO) {
+                String bin=$n.text;
+                int exp=2;
+                int decimal=0;
+                for (int n = bin.length(); n >=0; n--) 
+                { 
+                    char c = bin.charAt (n);
+                    decimal+=Integer.parseInt(c) * exp;
+                    exp*=2; 
+                }
+                System.out.println("decimal: "+decimal);
+            }))) (RULE BINARIO (BLOCK (ALT (+ (BLOCK (ALT [01])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\r\n]) skip)))))
+2020-03-30 17:05:21:767 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR binario_decimal (RULES (RULE varios (BLOCK (ALT (+ (BLOCK (ALT convertir)))))) (RULE convertir (BLOCK (ALT (= n BINARIO) {
+                String bin=$n.text;
+                int exp=2;
+                int decimal=0;
+                for (int n = bin.length(); n >=0; n--) 
+                { 
+                    char c = bin.charAt (n);
+                    decimal+=Integer.parseInt(c) * exp;
+                    exp*=2; 
+                }
+                System.out.println("decimal: "+decimal);
+            })))))
+2020-03-30 17:05:21:767 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR binario_decimalLexer (RULES (RULE BINARIO (BLOCK (ALT (+ (BLOCK (ALT [01])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\r\n]) skip)))))
+2020-03-30 17:05:22:099 semantics LogManager.java:25 tokens={EOF=-1, BINARIO=1, WS=2}
+2020-03-30 17:05:22:099 semantics LogManager.java:25 strings={}
+2020-03-30 17:05:22:110 LL1 LogManager.java:25 
+DECISION 0 in rule varios
+2020-03-30 17:05:22:110 LL1 LogManager.java:25 look=[1, <EOF>]
+2020-03-30 17:05:22:110 LL1 LogManager.java:25 LL(1)? true
+2020-03-30 17:05:22:135 action-translator LogManager.java:25 translate 
+                String bin=$n.text;
+                int exp=2;
+                int decimal=0;
+                for (int n = bin.length(); n >=0; n--) 
+                { 
+                    char c = bin.charAt (n);
+                    decimal+=Integer.parseInt(c) * exp;
+                    exp*=2; 
+                }
+                System.out.println("decimal: "+decimal);
+            
+2020-03-30 17:05:22:136 action-translator LogManager.java:25 qattr [@-1,30:30='n',<0>,6:28].[@-1,32:35='text',<0>,6:30]

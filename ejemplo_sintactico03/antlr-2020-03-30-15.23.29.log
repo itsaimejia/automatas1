@@ -1,0 +1,16 @@
+2020-03-30 15:23:28:239 grammar LogManager.java:25 before: (COMBINED_GRAMMAR numeros (RULES (RULE numeros (BLOCK (ALT (= a NUMBER) (= b NUMBER) {
+                System.out.println($a.text +" "+ b.text);
+            }))) (RULE NUMBER (BLOCK (ALT (+ (BLOCK (ALT [0-9])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\r\n]) skip)))))
+2020-03-30 15:23:28:259 grammar LogManager.java:25 after: (COMBINED_GRAMMAR numeros (RULES (RULE numeros (BLOCK (ALT (= a NUMBER) (= b NUMBER) {
+                System.out.println($a.text +" "+ b.text);
+            }))) (RULE NUMBER (BLOCK (ALT (+ (BLOCK (ALT [0-9])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\r\n]) skip)))))
+2020-03-30 15:23:28:300 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR numeros (RULES (RULE numeros (BLOCK (ALT (= a NUMBER) (= b NUMBER) {
+                System.out.println($a.text +" "+ b.text);
+            })))))
+2020-03-30 15:23:28:300 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR numerosLexer (RULES (RULE NUMBER (BLOCK (ALT (+ (BLOCK (ALT [0-9])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\r\n]) skip)))))
+2020-03-30 15:23:29:039 semantics LogManager.java:25 tokens={EOF=-1, NUMBER=1, WS=2}
+2020-03-30 15:23:29:039 semantics LogManager.java:25 strings={}
+2020-03-30 15:23:29:079 action-translator LogManager.java:25 translate 
+                System.out.println($a.text +" "+ b.text);
+            
+2020-03-30 15:23:29:080 action-translator LogManager.java:25 qattr [@-1,38:38='a',<0>,8:36].[@-1,40:43='text',<0>,8:38]

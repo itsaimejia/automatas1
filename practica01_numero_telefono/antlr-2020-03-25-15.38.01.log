@@ -1,0 +1,6 @@
+2020-03-25 15:38:01:416 grammar LogManager.java:25 before: (COMBINED_GRAMMAR telefono (RULES (RULE numero_telefonico (BLOCK (ALT '(' DIGITO DIGITO DIGITO ')' '-' '(' DIGITO DIGITO DIGITO DIGITO DIGITO DIGITO ')'))) (RULE DIGITO (BLOCK (ALT [0-9])))))
+2020-03-25 15:38:01:427 grammar LogManager.java:25 after: (COMBINED_GRAMMAR telefono (RULES (RULE numero_telefonico (BLOCK (ALT '(' DIGITO DIGITO DIGITO ')' '-' '(' DIGITO DIGITO DIGITO DIGITO DIGITO DIGITO ')'))) (RULE DIGITO (BLOCK (ALT [0-9])))))
+2020-03-25 15:38:01:445 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR telefono (RULES (RULE numero_telefonico (BLOCK (ALT '(' DIGITO DIGITO DIGITO ')' '-' '(' DIGITO DIGITO DIGITO DIGITO DIGITO DIGITO ')')))))
+2020-03-25 15:38:01:446 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR telefonoLexer (RULES (RULE T__0 (BLOCK (ALT '('))) (RULE T__1 (BLOCK (ALT ')'))) (RULE T__2 (BLOCK (ALT '-'))) (RULE DIGITO (BLOCK (ALT [0-9])))))
+2020-03-25 15:38:01:748 semantics LogManager.java:25 tokens={EOF=-1, T__0=1, T__1=2, T__2=3, DIGITO=4}
+2020-03-25 15:38:01:748 semantics LogManager.java:25 strings={'('=1, ')'=2, '-'=3}

@@ -1,0 +1,25 @@
+2020-03-31 19:58:34:598 grammar LogManager.java:25 before: (COMBINED_GRAMMAR binario_decimal (RULES (RULE varios (BLOCK (ALT (+ (BLOCK (ALT convertir)))))) (RULE convertir (BLOCK (ALT (= n BINARIO) {
+                ToDecimal decimal= new ToDecimal($n.getText());
+                System.out.println("El valor de "+$n.getText()+" en decimal es: "+decimal.decimal());
+            }))) (RULE BINARIO (BLOCK (ALT (+ (BLOCK (ALT [01])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\r\n]) skip)))))
+2020-03-31 19:58:34:608 grammar LogManager.java:25 after: (COMBINED_GRAMMAR binario_decimal (RULES (RULE varios (BLOCK (ALT (+ (BLOCK (ALT convertir)))))) (RULE convertir (BLOCK (ALT (= n BINARIO) {
+                ToDecimal decimal= new ToDecimal($n.getText());
+                System.out.println("El valor de "+$n.getText()+" en decimal es: "+decimal.decimal());
+            }))) (RULE BINARIO (BLOCK (ALT (+ (BLOCK (ALT [01])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\r\n]) skip)))))
+2020-03-31 19:58:34:626 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR binario_decimal (RULES (RULE varios (BLOCK (ALT (+ (BLOCK (ALT convertir)))))) (RULE convertir (BLOCK (ALT (= n BINARIO) {
+                ToDecimal decimal= new ToDecimal($n.getText());
+                System.out.println("El valor de "+$n.getText()+" en decimal es: "+decimal.decimal());
+            })))))
+2020-03-31 19:58:34:626 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR binario_decimalLexer (RULES (RULE BINARIO (BLOCK (ALT (+ (BLOCK (ALT [01])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\r\n]) skip)))))
+2020-03-31 19:58:34:972 semantics LogManager.java:25 tokens={EOF=-1, BINARIO=1, WS=2}
+2020-03-31 19:58:34:972 semantics LogManager.java:25 strings={}
+2020-03-31 19:58:34:983 LL1 LogManager.java:25 
+DECISION 0 in rule varios
+2020-03-31 19:58:34:983 LL1 LogManager.java:25 look=[1, <EOF>]
+2020-03-31 19:58:34:983 LL1 LogManager.java:25 LL(1)? true
+2020-03-31 19:58:35:006 action-translator LogManager.java:25 translate 
+                ToDecimal decimal= new ToDecimal($n.getText());
+                System.out.println("El valor de "+$n.getText()+" en decimal es: "+decimal.decimal());
+            
+2020-03-31 19:58:35:006 action-translator LogManager.java:25 attr [@-1,52:52='n',<0>,8:50]
+2020-03-31 19:58:35:007 action-translator LogManager.java:25 attr [@-1,118:118='n',<0>,9:51]

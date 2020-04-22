@@ -1,0 +1,22 @@
+2020-04-01 15:52:51:904 grammar LogManager.java:25 before: (COMBINED_GRAMMAR corchetes (RULES (RULE lista (BLOCK (ALT (+ (BLOCK (ALT base)))))) (RULE base (BLOCK (ALT OPEN (* (BLOCK (ALT VNUMBERSC))) (* (BLOCK (ALT COMA))) CLOSE (* (BLOCK (ALT COMA)))))) (RULE VNUMBERSC (BLOCK (ALT NUMBER (* (BLOCK (ALT COMA)))))) (RULE OPEN (BLOCK (ALT (+ (BLOCK (ALT '[')))))) (RULE CLOSE (BLOCK (ALT (+ (BLOCK (ALT ']')))))) (RULE NUMBER (BLOCK (ALT (+ (BLOCK (ALT [0-9])))))) (RULE COMA (BLOCK (ALT ','))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\n\r]) skip)))))
+2020-04-01 15:52:51:919 grammar LogManager.java:25 after: (COMBINED_GRAMMAR corchetes (RULES (RULE lista (BLOCK (ALT (+ (BLOCK (ALT base)))))) (RULE base (BLOCK (ALT OPEN (* (BLOCK (ALT VNUMBERSC))) (* (BLOCK (ALT COMA))) CLOSE (* (BLOCK (ALT COMA)))))) (RULE VNUMBERSC (BLOCK (ALT NUMBER (* (BLOCK (ALT COMA)))))) (RULE OPEN (BLOCK (ALT (+ (BLOCK (ALT '[')))))) (RULE CLOSE (BLOCK (ALT (+ (BLOCK (ALT ']')))))) (RULE NUMBER (BLOCK (ALT (+ (BLOCK (ALT [0-9])))))) (RULE COMA (BLOCK (ALT ','))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\n\r]) skip)))))
+2020-04-01 15:52:51:942 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR corchetes (RULES (RULE lista (BLOCK (ALT (+ (BLOCK (ALT base)))))) (RULE base (BLOCK (ALT OPEN (* (BLOCK (ALT VNUMBERSC))) (* (BLOCK (ALT COMA))) CLOSE (* (BLOCK (ALT COMA))))))))
+2020-04-01 15:52:51:942 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR corchetesLexer (RULES (RULE VNUMBERSC (BLOCK (ALT NUMBER (* (BLOCK (ALT COMA)))))) (RULE OPEN (BLOCK (ALT (+ (BLOCK (ALT '[')))))) (RULE CLOSE (BLOCK (ALT (+ (BLOCK (ALT ']')))))) (RULE NUMBER (BLOCK (ALT (+ (BLOCK (ALT [0-9])))))) (RULE COMA (BLOCK (ALT ','))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\n\r]) skip)))))
+2020-04-01 15:52:52:313 semantics LogManager.java:25 tokens={EOF=-1, VNUMBERSC=1, OPEN=2, CLOSE=3, NUMBER=4, COMA=5, WS=6}
+2020-04-01 15:52:52:313 semantics LogManager.java:25 strings={','=5}
+2020-04-01 15:52:52:318 LL1 LogManager.java:25 
+DECISION 0 in rule lista
+2020-04-01 15:52:52:318 LL1 LogManager.java:25 look=[2, <EOF>]
+2020-04-01 15:52:52:318 LL1 LogManager.java:25 LL(1)? true
+2020-04-01 15:52:52:318 LL1 LogManager.java:25 
+DECISION 1 in rule base
+2020-04-01 15:52:52:319 LL1 LogManager.java:25 look=[1, {3, 5}]
+2020-04-01 15:52:52:319 LL1 LogManager.java:25 LL(1)? true
+2020-04-01 15:52:52:319 LL1 LogManager.java:25 
+DECISION 2 in rule base
+2020-04-01 15:52:52:319 LL1 LogManager.java:25 look=[5, 3]
+2020-04-01 15:52:52:319 LL1 LogManager.java:25 LL(1)? true
+2020-04-01 15:52:52:319 LL1 LogManager.java:25 
+DECISION 3 in rule base
+2020-04-01 15:52:52:319 LL1 LogManager.java:25 look=[5, {<EOF>, 2}]
+2020-04-01 15:52:52:319 LL1 LogManager.java:25 LL(1)? true

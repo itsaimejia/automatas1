@@ -1,0 +1,13 @@
+2020-04-20 17:00:22:198 grammar LogManager.java:25 before: (COMBINED_GRAMMAR password (RULES (RULE password (BLOCK (ALT (= w BASE) {
+            VerifyP v = new VerifyP($w.text);
+            v.valid();
+        }))) (RULE BASE (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\n\r\e]) skip)))))
+2020-04-20 17:00:22:212 grammar LogManager.java:25 after: (COMBINED_GRAMMAR password (RULES (RULE password (BLOCK (ALT (= w BASE) {
+            VerifyP v = new VerifyP($w.text);
+            v.valid();
+        }))) (RULE BASE (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\n\r\e]) skip)))))
+2020-04-20 17:00:22:234 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR password (RULES (RULE password (BLOCK (ALT (= w BASE) {
+            VerifyP v = new VerifyP($w.text);
+            v.valid();
+        })))))
+2020-04-20 17:00:22:234 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR passwordLexer (RULES (RULE BASE (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\n\r\e]) skip)))))

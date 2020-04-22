@@ -1,0 +1,18 @@
+2020-04-01 16:34:53:688 grammar LogManager.java:25 before: (COMBINED_GRAMMAR corchetes (RULES (RULE multi (BLOCK (ALT ciclobase))) (RULE ciclobase (BLOCK (ALT (+ (BLOCK (ALT base))) (* (BLOCK (ALT COMA)))))) (RULE base (BLOCK (ALT OPEN elementos CLOSE))) (RULE elementos (BLOCK (ALT NUMBER (* (BLOCK (ALT COMA)))))) (RULE OPEN (BLOCK (ALT (+ (BLOCK (ALT '[')))))) (RULE CLOSE (BLOCK (ALT (+ (BLOCK (ALT ']')))))) (RULE NUMBER (BLOCK (ALT (+ (BLOCK (ALT [0-9])))))) (RULE COMA (BLOCK (ALT ','))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\n\r]) skip)))))
+2020-04-01 16:34:53:702 grammar LogManager.java:25 after: (COMBINED_GRAMMAR corchetes (RULES (RULE multi (BLOCK (ALT ciclobase))) (RULE ciclobase (BLOCK (ALT (+ (BLOCK (ALT base))) (* (BLOCK (ALT COMA)))))) (RULE base (BLOCK (ALT OPEN elementos CLOSE))) (RULE elementos (BLOCK (ALT NUMBER (* (BLOCK (ALT COMA)))))) (RULE OPEN (BLOCK (ALT (+ (BLOCK (ALT '[')))))) (RULE CLOSE (BLOCK (ALT (+ (BLOCK (ALT ']')))))) (RULE NUMBER (BLOCK (ALT (+ (BLOCK (ALT [0-9])))))) (RULE COMA (BLOCK (ALT ','))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\n\r]) skip)))))
+2020-04-01 16:34:53:724 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR corchetes (RULES (RULE multi (BLOCK (ALT ciclobase))) (RULE ciclobase (BLOCK (ALT (+ (BLOCK (ALT base))) (* (BLOCK (ALT COMA)))))) (RULE base (BLOCK (ALT OPEN elementos CLOSE))) (RULE elementos (BLOCK (ALT NUMBER (* (BLOCK (ALT COMA))))))))
+2020-04-01 16:34:53:724 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR corchetesLexer (RULES (RULE OPEN (BLOCK (ALT (+ (BLOCK (ALT '[')))))) (RULE CLOSE (BLOCK (ALT (+ (BLOCK (ALT ']')))))) (RULE NUMBER (BLOCK (ALT (+ (BLOCK (ALT [0-9])))))) (RULE COMA (BLOCK (ALT ','))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\n\r]) skip)))))
+2020-04-01 16:34:54:102 semantics LogManager.java:25 tokens={EOF=-1, OPEN=1, CLOSE=2, NUMBER=3, COMA=4, WS=5}
+2020-04-01 16:34:54:102 semantics LogManager.java:25 strings={','=4}
+2020-04-01 16:34:54:112 LL1 LogManager.java:25 
+DECISION 0 in rule ciclobase
+2020-04-01 16:34:54:112 LL1 LogManager.java:25 look=[1, {<EOF>, 4}]
+2020-04-01 16:34:54:112 LL1 LogManager.java:25 LL(1)? true
+2020-04-01 16:34:54:112 LL1 LogManager.java:25 
+DECISION 1 in rule ciclobase
+2020-04-01 16:34:54:112 LL1 LogManager.java:25 look=[4, <EOF>]
+2020-04-01 16:34:54:114 LL1 LogManager.java:25 LL(1)? true
+2020-04-01 16:34:54:114 LL1 LogManager.java:25 
+DECISION 2 in rule elementos
+2020-04-01 16:34:54:114 LL1 LogManager.java:25 look=[4, 2]
+2020-04-01 16:34:54:114 LL1 LogManager.java:25 LL(1)? true

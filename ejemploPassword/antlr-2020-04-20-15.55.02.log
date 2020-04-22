@@ -1,0 +1,20 @@
+2020-04-20 15:55:02:457 grammar LogManager.java:25 before: (COMBINED_GRAMMAR password (RULES (RULE password (BLOCK (ALT (= w WORD) {
+            VerifyP v = new VerifyP($w.text);
+            System.out.println(v.valid()?"Valido":"No valido");
+        }))) (RULE WORD (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\n\r]) skip)))))
+2020-04-20 15:55:02:466 grammar LogManager.java:25 after: (COMBINED_GRAMMAR password (RULES (RULE password (BLOCK (ALT (= w WORD) {
+            VerifyP v = new VerifyP($w.text);
+            System.out.println(v.valid()?"Valido":"No valido");
+        }))) (RULE WORD (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\n\r]) skip)))))
+2020-04-20 15:55:02:484 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR password (RULES (RULE password (BLOCK (ALT (= w WORD) {
+            VerifyP v = new VerifyP($w.text);
+            System.out.println(v.valid()?"Valido":"No valido");
+        })))))
+2020-04-20 15:55:02:484 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR passwordLexer (RULES (RULE WORD (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\n\r]) skip)))))
+2020-04-20 15:55:02:767 semantics LogManager.java:25 tokens={EOF=-1, WORD=1, WS=2}
+2020-04-20 15:55:02:767 semantics LogManager.java:25 strings={}
+2020-04-20 15:55:02:791 action-translator LogManager.java:25 translate 
+            VerifyP v = new VerifyP($w.text);
+            System.out.println(v.valid()?"Valido":"No valido");
+        
+2020-04-20 15:55:02:791 action-translator LogManager.java:25 qattr [@-1,39:39='w',<0>,12:37].[@-1,41:44='text',<0>,12:39]

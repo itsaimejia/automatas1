@@ -1,0 +1,10 @@
+2020-03-25 16:16:03:873 grammar LogManager.java:25 before: (COMBINED_GRAMMAR telefono (RULES (RULE numeros_telefonicos (BLOCK (ALT (+ (BLOCK (ALT '(' DIGITO DIGITO DIGITO ')' '-' '(' DIGITO DIGITO DIGITO DIGITO DIGITO DIGITO ')')))))) (RULE DIGITO (BLOCK (ALT [0-9]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ \r\n]) skip)))))
+2020-03-25 16:16:03:882 grammar LogManager.java:25 after: (COMBINED_GRAMMAR telefono (RULES (RULE numeros_telefonicos (BLOCK (ALT (+ (BLOCK (ALT '(' DIGITO DIGITO DIGITO ')' '-' '(' DIGITO DIGITO DIGITO DIGITO DIGITO DIGITO ')')))))) (RULE DIGITO (BLOCK (ALT [0-9]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ \r\n]) skip)))))
+2020-03-25 16:16:03:903 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR telefono (RULES (RULE numeros_telefonicos (BLOCK (ALT (+ (BLOCK (ALT '(' DIGITO DIGITO DIGITO ')' '-' '(' DIGITO DIGITO DIGITO DIGITO DIGITO DIGITO ')'))))))))
+2020-03-25 16:16:03:903 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR telefonoLexer (RULES (RULE T__0 (BLOCK (ALT '('))) (RULE T__1 (BLOCK (ALT ')'))) (RULE T__2 (BLOCK (ALT '-'))) (RULE DIGITO (BLOCK (ALT [0-9]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ \r\n]) skip)))))
+2020-03-25 16:16:04:199 semantics LogManager.java:25 tokens={EOF=-1, T__0=1, T__1=2, T__2=3, DIGITO=4, ESPACIOS=5}
+2020-03-25 16:16:04:199 semantics LogManager.java:25 strings={'('=1, ')'=2, '-'=3}
+2020-03-25 16:16:04:206 LL1 LogManager.java:25 
+DECISION 0 in rule numeros_telefonicos
+2020-03-25 16:16:04:211 LL1 LogManager.java:25 look=[1, <EOF>]
+2020-03-25 16:16:04:211 LL1 LogManager.java:25 LL(1)? true

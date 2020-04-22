@@ -1,0 +1,21 @@
+2020-03-30 15:33:19:541 grammar LogManager.java:25 before: (COMBINED_GRAMMAR numeros (RULES (RULE numeros (BLOCK (ALT (= a NUMBER) (= b NUMBER) {
+                Suma suma= new Suma(Integer.parseInt($a.text),Integer.parseInt($b.text));
+                System.out.println(suma.sumar());
+            }))) (RULE NUMBER (BLOCK (ALT (+ (BLOCK (ALT [0-9])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\r\n]) skip)))))
+2020-03-30 15:33:19:553 grammar LogManager.java:25 after: (COMBINED_GRAMMAR numeros (RULES (RULE numeros (BLOCK (ALT (= a NUMBER) (= b NUMBER) {
+                Suma suma= new Suma(Integer.parseInt($a.text),Integer.parseInt($b.text));
+                System.out.println(suma.sumar());
+            }))) (RULE NUMBER (BLOCK (ALT (+ (BLOCK (ALT [0-9])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\r\n]) skip)))))
+2020-03-30 15:33:19:574 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR numeros (RULES (RULE numeros (BLOCK (ALT (= a NUMBER) (= b NUMBER) {
+                Suma suma= new Suma(Integer.parseInt($a.text),Integer.parseInt($b.text));
+                System.out.println(suma.sumar());
+            })))))
+2020-03-30 15:33:19:574 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR numerosLexer (RULES (RULE NUMBER (BLOCK (ALT (+ (BLOCK (ALT [0-9])))))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ \t\r\n]) skip)))))
+2020-03-30 15:33:19:927 semantics LogManager.java:25 tokens={EOF=-1, NUMBER=1, WS=2}
+2020-03-30 15:33:19:927 semantics LogManager.java:25 strings={}
+2020-03-30 15:33:19:954 action-translator LogManager.java:25 translate 
+                Suma suma= new Suma(Integer.parseInt($a.text),Integer.parseInt($b.text));
+                System.out.println(suma.sumar());
+            
+2020-03-30 15:33:19:955 action-translator LogManager.java:25 qattr [@-1,56:56='a',<0>,8:54].[@-1,58:61='text',<0>,8:56]
+2020-03-30 15:33:19:956 action-translator LogManager.java:25 qattr [@-1,82:82='b',<0>,8:80].[@-1,84:87='text',<0>,8:82]
