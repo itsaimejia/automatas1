@@ -1,0 +1,15 @@
+INT=1
+CHAR=2
+FLOAT=3
+BOOLEAN=4
+DOUBLE=5
+NOMBRE=6
+PC=7
+ENTER=8
+ESPACIOS=9
+'int'=1
+'char'=2
+'float'=3
+'boolean'=4
+'double'=5
+';'=7

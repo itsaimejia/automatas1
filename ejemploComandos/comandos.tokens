@@ -1,0 +1,13 @@
+CD=1
+DIR=2
+TREE=3
+CLS=4
+EXIT=5
+RUTA=6
+ENTER=7
+ESPACIOS=8
+'cd'=1
+'dir'=2
+'tree'=3
+'cls'=4
+'exit'=5

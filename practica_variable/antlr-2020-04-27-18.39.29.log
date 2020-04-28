@@ -1,0 +1,41 @@
+2020-04-27 18:39:28:994 grammar LogManager.java:25 before: (COMBINED_GRAMMAR variables (RULES (RULE variables (BLOCK (ALT (+ (BLOCK (ALT estructura)))))) (RULE estructura (BLOCK (ALT (= t INT) (= n NOMBRE)) (ALT (= t FLOAT) (= n NOMBRE)) (ALT (= t CHAR) (= n NOMBRE)) (ALT (= t BOOLEAN) (= n NOMBRE)) (ALT (= t DOUBLE) (= n NOMBRE) {
+                ValidateVar v = new ValidateVar($t.text, $n.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }))) (RULE INT (BLOCK (ALT 'int'))) (RULE CHAR (BLOCK (ALT 'char'))) (RULE FLOAT (BLOCK (ALT 'float'))) (RULE BOOLEAN (BLOCK (ALT 'boolean'))) (RULE DOUBLE (BLOCK (ALT 'double'))) (RULE NOMBRE (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9_]))) PC))) (RULE PC (BLOCK (ALT ';'))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 18:39:29:006 grammar LogManager.java:25 after: (COMBINED_GRAMMAR variables (RULES (RULE variables (BLOCK (ALT (+ (BLOCK (ALT estructura)))))) (RULE estructura (BLOCK (ALT (= t INT) (= n NOMBRE)) (ALT (= t FLOAT) (= n NOMBRE)) (ALT (= t CHAR) (= n NOMBRE)) (ALT (= t BOOLEAN) (= n NOMBRE)) (ALT (= t DOUBLE) (= n NOMBRE) {
+                ValidateVar v = new ValidateVar($t.text, $n.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }))) (RULE INT (BLOCK (ALT 'int'))) (RULE CHAR (BLOCK (ALT 'char'))) (RULE FLOAT (BLOCK (ALT 'float'))) (RULE BOOLEAN (BLOCK (ALT 'boolean'))) (RULE DOUBLE (BLOCK (ALT 'double'))) (RULE NOMBRE (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9_]))) PC))) (RULE PC (BLOCK (ALT ';'))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 18:39:29:026 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR variables (RULES (RULE variables (BLOCK (ALT (+ (BLOCK (ALT estructura)))))) (RULE estructura (BLOCK (ALT (= t INT) (= n NOMBRE)) (ALT (= t FLOAT) (= n NOMBRE)) (ALT (= t CHAR) (= n NOMBRE)) (ALT (= t BOOLEAN) (= n NOMBRE)) (ALT (= t DOUBLE) (= n NOMBRE) {
+                ValidateVar v = new ValidateVar($t.text, $n.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            })))))
+2020-04-27 18:39:29:026 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR variablesLexer (RULES (RULE INT (BLOCK (ALT 'int'))) (RULE CHAR (BLOCK (ALT 'char'))) (RULE FLOAT (BLOCK (ALT 'float'))) (RULE BOOLEAN (BLOCK (ALT 'boolean'))) (RULE DOUBLE (BLOCK (ALT 'double'))) (RULE NOMBRE (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9_]))) PC))) (RULE PC (BLOCK (ALT ';'))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 18:39:29:306 semantics LogManager.java:25 tokens={EOF=-1, INT=1, CHAR=2, FLOAT=3, BOOLEAN=4, DOUBLE=5, NOMBRE=6, PC=7, ENTER=8, ESPACIOS=9}
+2020-04-27 18:39:29:306 semantics LogManager.java:25 strings={'int'=1, 'char'=2, 'float'=3, 'boolean'=4, 'double'=5, ';'=7}
+2020-04-27 18:39:29:315 LL1 LogManager.java:25 
+DECISION 0 in rule variables
+2020-04-27 18:39:29:315 LL1 LogManager.java:25 look=[{1..5}, <EOF>]
+2020-04-27 18:39:29:315 LL1 LogManager.java:25 LL(1)? true
+2020-04-27 18:39:29:315 LL1 LogManager.java:25 
+DECISION 1 in rule estructura
+2020-04-27 18:39:29:315 LL1 LogManager.java:25 look=[1, 3, 2, 4, 5]
+2020-04-27 18:39:29:315 LL1 LogManager.java:25 LL(1)? true
+2020-04-27 18:39:29:335 action-translator LogManager.java:25 translate 
+                ValidateVar v = new ValidateVar($t.text, $n.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            
+2020-04-27 18:39:29:336 action-translator LogManager.java:25 qattr [@-1,51:51='t',<0>,15:49].[@-1,53:56='text',<0>,15:51]
+2020-04-27 18:39:29:336 action-translator LogManager.java:25 qattr [@-1,60:60='n',<0>,15:58].[@-1,62:65='text',<0>,15:60]

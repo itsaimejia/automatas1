@@ -1,0 +1,110 @@
+2020-04-27 18:42:55:451 grammar LogManager.java:25 before: (COMBINED_GRAMMAR variables (RULES (RULE variables (BLOCK (ALT (+ (BLOCK (ALT estructura)))))) (RULE estructura (BLOCK (ALT INT NOMBRE {
+                ValidateVar v = new ValidateVar($INT.text, $NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }) (ALT FLOAT NOMBRE {
+                ValidateVar v = new ValidateVar($FLOAT.text, $NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }) (ALT CHAR NOMBRE {
+                ValidateVar v = new ValidateVar($CHAR.text, $NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }) (ALT BOOLEAN NOMBRE {
+                ValidateVar v = new ValidateVar($BOOLEAN.text, $NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }) (ALT DOUBLE NOMBRE {
+                ValidateVar v = new ValidateVar($DOUBLE.text, $NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }) (ALT {
+                System.out.println("ERROR de entrada");
+            }))) (RULE INT (BLOCK (ALT 'int'))) (RULE CHAR (BLOCK (ALT 'char'))) (RULE FLOAT (BLOCK (ALT 'float'))) (RULE BOOLEAN (BLOCK (ALT 'boolean'))) (RULE DOUBLE (BLOCK (ALT 'double'))) (RULE NOMBRE (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9_]))) PC))) (RULE PC (BLOCK (ALT ';'))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 18:42:55:463 grammar LogManager.java:25 after: (COMBINED_GRAMMAR variables (RULES (RULE variables (BLOCK (ALT (+ (BLOCK (ALT estructura)))))) (RULE estructura (BLOCK (ALT INT NOMBRE {
+                ValidateVar v = new ValidateVar($INT.text, $NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }) (ALT FLOAT NOMBRE {
+                ValidateVar v = new ValidateVar($FLOAT.text, $NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }) (ALT CHAR NOMBRE {
+                ValidateVar v = new ValidateVar($CHAR.text, $NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }) (ALT BOOLEAN NOMBRE {
+                ValidateVar v = new ValidateVar($BOOLEAN.text, $NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }) (ALT DOUBLE NOMBRE {
+                ValidateVar v = new ValidateVar($DOUBLE.text, $NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }) (ALT {
+                System.out.println("ERROR de entrada");
+            }))) (RULE INT (BLOCK (ALT 'int'))) (RULE CHAR (BLOCK (ALT 'char'))) (RULE FLOAT (BLOCK (ALT 'float'))) (RULE BOOLEAN (BLOCK (ALT 'boolean'))) (RULE DOUBLE (BLOCK (ALT 'double'))) (RULE NOMBRE (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9_]))) PC))) (RULE PC (BLOCK (ALT ';'))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 18:42:55:482 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR variables (RULES (RULE variables (BLOCK (ALT (+ (BLOCK (ALT estructura)))))) (RULE estructura (BLOCK (ALT INT NOMBRE {
+                ValidateVar v = new ValidateVar($INT.text, $NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }) (ALT FLOAT NOMBRE {
+                ValidateVar v = new ValidateVar($FLOAT.text, $NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }) (ALT CHAR NOMBRE {
+                ValidateVar v = new ValidateVar($CHAR.text, $NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }) (ALT BOOLEAN NOMBRE {
+                ValidateVar v = new ValidateVar($BOOLEAN.text, $NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }) (ALT DOUBLE NOMBRE {
+                ValidateVar v = new ValidateVar($DOUBLE.text, $NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }) (ALT {
+                System.out.println("ERROR de entrada");
+            })))))
+2020-04-27 18:42:55:482 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR variablesLexer (RULES (RULE INT (BLOCK (ALT 'int'))) (RULE CHAR (BLOCK (ALT 'char'))) (RULE FLOAT (BLOCK (ALT 'float'))) (RULE BOOLEAN (BLOCK (ALT 'boolean'))) (RULE DOUBLE (BLOCK (ALT 'double'))) (RULE NOMBRE (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9_]))) PC))) (RULE PC (BLOCK (ALT ';'))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 18:42:55:766 semantics LogManager.java:25 tokens={EOF=-1, INT=1, CHAR=2, FLOAT=3, BOOLEAN=4, DOUBLE=5, NOMBRE=6, PC=7, ENTER=8, ESPACIOS=9}
+2020-04-27 18:42:55:766 semantics LogManager.java:25 strings={'int'=1, 'char'=2, 'float'=3, 'boolean'=4, 'double'=5, ';'=7}
+2020-04-27 18:42:55:778 LL1 LogManager.java:25 
+DECISION 0 in rule variables
+2020-04-27 18:42:55:778 LL1 LogManager.java:25 look=[{<EOF>, 1..5}, <EOF>]
+2020-04-27 18:42:55:778 LL1 LogManager.java:25 LL(1)? false
+2020-04-27 18:42:55:778 LL1 LogManager.java:25 
+DECISION 1 in rule estructura
+2020-04-27 18:42:55:779 LL1 LogManager.java:25 look=[1, 3, 2, 4, 5, {<EOF>, 1..5}]
+2020-04-27 18:42:55:779 LL1 LogManager.java:25 LL(1)? false

@@ -1,0 +1,32 @@
+2020-04-27 18:07:44:136 grammar LogManager.java:25 before: (COMBINED_GRAMMAR variables (RULES (RULE variables (BLOCK (ALT estructura))) (RULE estructura (BLOCK (ALT INT NOMBRE P_C {
+                ValidateName v = new ValidateName($NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }))) (RULE INT (BLOCK (ALT 'int'))) (RULE CHAR (BLOCK (ALT 'char'))) (RULE FLOAT (BLOCK (ALT 'float'))) (RULE BOOLEAN (BLOCK (ALT 'bool'))) (RULE DOUBLE (BLOCK (ALT 'double'))) (RULE P_C (BLOCK (ALT ';'))) (RULE NOMBRE (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9_])))))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 18:07:44:148 grammar LogManager.java:25 after: (COMBINED_GRAMMAR variables (RULES (RULE variables (BLOCK (ALT estructura))) (RULE estructura (BLOCK (ALT INT NOMBRE P_C {
+                ValidateName v = new ValidateName($NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            }))) (RULE INT (BLOCK (ALT 'int'))) (RULE CHAR (BLOCK (ALT 'char'))) (RULE FLOAT (BLOCK (ALT 'float'))) (RULE BOOLEAN (BLOCK (ALT 'bool'))) (RULE DOUBLE (BLOCK (ALT 'double'))) (RULE P_C (BLOCK (ALT ';'))) (RULE NOMBRE (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9_])))))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 18:07:44:167 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR variables (RULES (RULE variables (BLOCK (ALT estructura))) (RULE estructura (BLOCK (ALT INT NOMBRE P_C {
+                ValidateName v = new ValidateName($NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            })))))
+2020-04-27 18:07:44:167 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR variablesLexer (RULES (RULE INT (BLOCK (ALT 'int'))) (RULE CHAR (BLOCK (ALT 'char'))) (RULE FLOAT (BLOCK (ALT 'float'))) (RULE BOOLEAN (BLOCK (ALT 'bool'))) (RULE DOUBLE (BLOCK (ALT 'double'))) (RULE P_C (BLOCK (ALT ';'))) (RULE NOMBRE (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9_])))))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 18:07:44:444 semantics LogManager.java:25 tokens={EOF=-1, INT=1, CHAR=2, FLOAT=3, BOOLEAN=4, DOUBLE=5, P_C=6, NOMBRE=7, ENTER=8, ESPACIOS=9}
+2020-04-27 18:07:44:444 semantics LogManager.java:25 strings={'int'=1, 'char'=2, 'float'=3, 'bool'=4, 'double'=5, ';'=6}
+2020-04-27 18:07:44:469 action-translator LogManager.java:25 translate 
+                ValidateName v = new ValidateName($NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
+            
+2020-04-27 18:07:44:470 action-translator LogManager.java:25 qattr [@-1,53:58='NOMBRE',<0>,10:51].[@-1,60:63='text',<0>,10:58]

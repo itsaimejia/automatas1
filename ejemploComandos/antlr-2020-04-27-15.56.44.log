@@ -1,0 +1,94 @@
+2020-04-27 15:56:44:128 grammar LogManager.java:25 before: (COMBINED_GRAMMAR comandos (RULES (RULE comandos (BLOCK (ALT consola))) (RULE consola (BLOCK (ALT CD RUTA ENTER {
+            System.out.println("El comando cd se utiliza para acceder a directorios dentro de los SO");
+            System.out.println("El comando que usted ingreso es: "+$CD.text+" "+$RUTA.text);
+            System.out.println($CD.text +" "+ $RUTA.text);
+        }) (ALT DIR (? (BLOCK (ALT RUTA))) ENTER {
+            System.out.println("El comando lista el contenido del directorio o carpeta donde te encuentras, mostrando todas las subcarpetas o archivos que tiene. Con este comando podrás saber si el archivo que buscas está ahí o a qué subcarpeta navegar.");
+            System.out.println("El comando que usted ingreso es: "+$DIR.text);
+            System.out.println($DIR.text´+" "+$RUTA.text);
+        }) (ALT TREE RUTA ENTER {
+            System.out.println("Te muestra el árbol de directorios de una carpeta concreta que le digas");
+            System.out.println("El comando que usted ingreso es: "+$TREE.text);
+            System.out.println($TREE.text +" "+ $RUTA.text);
+        }) (ALT CLS {
+            System.out.println("Limpia la ventana de la consola de Windows, borrando todo lo que se ha escrito en ella, tanto tus comandos como las respuestas de la propia consola. Se quedará todo como si la acabases de abrir de nuevo.");
+            System.out.println("El comando que usted ingreso es: "+$CLS.text);
+            System.out.println($CLS.text);
+        }))) (RULE CD (BLOCK (ALT 'cd'))) (RULE DIR (BLOCK (ALT 'dir'))) (RULE TREE (BLOCK (ALT 'tree'))) (RULE CLS (BLOCK (ALT 'cls'))) (RULE RUTA (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9-])))))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 15:56:44:142 grammar LogManager.java:25 after: (COMBINED_GRAMMAR comandos (RULES (RULE comandos (BLOCK (ALT consola))) (RULE consola (BLOCK (ALT CD RUTA ENTER {
+            System.out.println("El comando cd se utiliza para acceder a directorios dentro de los SO");
+            System.out.println("El comando que usted ingreso es: "+$CD.text+" "+$RUTA.text);
+            System.out.println($CD.text +" "+ $RUTA.text);
+        }) (ALT DIR (? (BLOCK (ALT RUTA))) ENTER {
+            System.out.println("El comando lista el contenido del directorio o carpeta donde te encuentras, mostrando todas las subcarpetas o archivos que tiene. Con este comando podrás saber si el archivo que buscas está ahí o a qué subcarpeta navegar.");
+            System.out.println("El comando que usted ingreso es: "+$DIR.text);
+            System.out.println($DIR.text´+" "+$RUTA.text);
+        }) (ALT TREE RUTA ENTER {
+            System.out.println("Te muestra el árbol de directorios de una carpeta concreta que le digas");
+            System.out.println("El comando que usted ingreso es: "+$TREE.text);
+            System.out.println($TREE.text +" "+ $RUTA.text);
+        }) (ALT CLS {
+            System.out.println("Limpia la ventana de la consola de Windows, borrando todo lo que se ha escrito en ella, tanto tus comandos como las respuestas de la propia consola. Se quedará todo como si la acabases de abrir de nuevo.");
+            System.out.println("El comando que usted ingreso es: "+$CLS.text);
+            System.out.println($CLS.text);
+        }))) (RULE CD (BLOCK (ALT 'cd'))) (RULE DIR (BLOCK (ALT 'dir'))) (RULE TREE (BLOCK (ALT 'tree'))) (RULE CLS (BLOCK (ALT 'cls'))) (RULE RUTA (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9-])))))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 15:56:44:162 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR comandos (RULES (RULE comandos (BLOCK (ALT consola))) (RULE consola (BLOCK (ALT CD RUTA ENTER {
+            System.out.println("El comando cd se utiliza para acceder a directorios dentro de los SO");
+            System.out.println("El comando que usted ingreso es: "+$CD.text+" "+$RUTA.text);
+            System.out.println($CD.text +" "+ $RUTA.text);
+        }) (ALT DIR (? (BLOCK (ALT RUTA))) ENTER {
+            System.out.println("El comando lista el contenido del directorio o carpeta donde te encuentras, mostrando todas las subcarpetas o archivos que tiene. Con este comando podrás saber si el archivo que buscas está ahí o a qué subcarpeta navegar.");
+            System.out.println("El comando que usted ingreso es: "+$DIR.text);
+            System.out.println($DIR.text´+" "+$RUTA.text);
+        }) (ALT TREE RUTA ENTER {
+            System.out.println("Te muestra el árbol de directorios de una carpeta concreta que le digas");
+            System.out.println("El comando que usted ingreso es: "+$TREE.text);
+            System.out.println($TREE.text +" "+ $RUTA.text);
+        }) (ALT CLS {
+            System.out.println("Limpia la ventana de la consola de Windows, borrando todo lo que se ha escrito en ella, tanto tus comandos como las respuestas de la propia consola. Se quedará todo como si la acabases de abrir de nuevo.");
+            System.out.println("El comando que usted ingreso es: "+$CLS.text);
+            System.out.println($CLS.text);
+        })))))
+2020-04-27 15:56:44:162 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR comandosLexer (RULES (RULE CD (BLOCK (ALT 'cd'))) (RULE DIR (BLOCK (ALT 'dir'))) (RULE TREE (BLOCK (ALT 'tree'))) (RULE CLS (BLOCK (ALT 'cls'))) (RULE RUTA (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9-])))))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 15:56:44:514 semantics LogManager.java:25 tokens={EOF=-1, CD=1, DIR=2, TREE=3, CLS=4, RUTA=5, ENTER=6, ESPACIOS=7}
+2020-04-27 15:56:44:514 semantics LogManager.java:25 strings={'cd'=1, 'dir'=2, 'tree'=3, 'cls'=4}
+2020-04-27 15:56:44:528 LL1 LogManager.java:25 
+DECISION 0 in rule consola
+2020-04-27 15:56:44:531 LL1 LogManager.java:25 look=[5, 6]
+2020-04-27 15:56:44:531 LL1 LogManager.java:25 LL(1)? true
+2020-04-27 15:56:44:531 LL1 LogManager.java:25 
+DECISION 1 in rule consola
+2020-04-27 15:56:44:531 LL1 LogManager.java:25 look=[1, 2, 3, 4]
+2020-04-27 15:56:44:531 LL1 LogManager.java:25 LL(1)? true
+2020-04-27 15:56:44:550 action-translator LogManager.java:25 translate 
+            System.out.println("El comando cd se utiliza para acceder a directorios dentro de los SO");
+            System.out.println("El comando que usted ingreso es: "+$CD.text+" "+$RUTA.text);
+            System.out.println($CD.text +" "+ $RUTA.text);
+        
+2020-04-27 15:56:44:550 action-translator LogManager.java:25 qattr [@-1,175:176='CD',<0>,8:68].[@-1,178:181='text',<0>,8:71]
+2020-04-27 15:56:44:551 action-translator LogManager.java:25 qattr [@-1,188:191='RUTA',<0>,8:81].[@-1,193:196='text',<0>,8:86]
+2020-04-27 15:56:44:551 action-translator LogManager.java:25 qattr [@-1,233:234='CD',<0>,9:32].[@-1,236:239='text',<0>,9:35]
+2020-04-27 15:56:44:552 action-translator LogManager.java:25 qattr [@-1,248:251='RUTA',<0>,9:47].[@-1,253:256='text',<0>,9:52]
+2020-04-27 15:56:44:554 action-translator LogManager.java:25 translate 
+            System.out.println("El comando lista el contenido del directorio o carpeta donde te encuentras, mostrando todas las subcarpetas o archivos que tiene. Con este comando podrás saber si el archivo que buscas está ahí o a qué subcarpeta navegar.");
+            System.out.println("El comando que usted ingreso es: "+$DIR.text);
+            System.out.println($DIR.text´+" "+$RUTA.text);
+        
+2020-04-27 15:56:44:554 action-translator LogManager.java:25 qattr [@-1,332:334='DIR',<0>,15:68].[@-1,336:339='text',<0>,15:72]
+2020-04-27 15:56:44:554 action-translator LogManager.java:25 qattr [@-1,376:378='DIR',<0>,16:32].[@-1,380:383='text',<0>,16:36]
+2020-04-27 15:56:44:555 action-translator LogManager.java:25 qattr [@-1,392:395='RUTA',<0>,16:48].[@-1,397:400='text',<0>,16:53]
+2020-04-27 15:56:44:555 action-translator LogManager.java:25 translate 
+            System.out.println("Te muestra el árbol de directorios de una carpeta concreta que le digas");
+            System.out.println("El comando que usted ingreso es: "+$TREE.text);
+            System.out.println($TREE.text +" "+ $RUTA.text);
+        
+2020-04-27 15:56:44:556 action-translator LogManager.java:25 qattr [@-1,179:182='TREE',<0>,22:68].[@-1,184:187='text',<0>,22:73]
+2020-04-27 15:56:44:556 action-translator LogManager.java:25 qattr [@-1,224:227='TREE',<0>,23:32].[@-1,229:232='text',<0>,23:37]
+2020-04-27 15:56:44:557 action-translator LogManager.java:25 qattr [@-1,241:244='RUTA',<0>,23:49].[@-1,246:249='text',<0>,23:54]
+2020-04-27 15:56:44:558 action-translator LogManager.java:25 translate 
+            System.out.println("Limpia la ventana de la consola de Windows, borrando todo lo que se ha escrito en ella, tanto tus comandos como las respuestas de la propia consola. Se quedará todo como si la acabases de abrir de nuevo.");
+            System.out.println("El comando que usted ingreso es: "+$CLS.text);
+            System.out.println($CLS.text);
+        
+2020-04-27 15:56:44:558 action-translator LogManager.java:25 qattr [@-1,311:313='CLS',<0>,29:68].[@-1,315:318='text',<0>,29:72]
+2020-04-27 15:56:44:558 action-translator LogManager.java:25 qattr [@-1,355:357='CLS',<0>,30:32].[@-1,359:362='text',<0>,30:36]

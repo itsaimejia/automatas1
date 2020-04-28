@@ -1,0 +1,17 @@
+2020-04-27 15:33:41:204 grammar LogManager.java:25 before: (COMBINED_GRAMMAR comandos (RULES (RULE comandos (BLOCK (ALT consola))) (RULE consola (BLOCK (ALT CD RUTA ENTER {
+            System.out.println($CD.text +" "+ $RUTA.text);
+        }))) (RULE CD (BLOCK (ALT 'cd'))) (RULE RUTA (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9-])))))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 15:33:41:215 grammar LogManager.java:25 after: (COMBINED_GRAMMAR comandos (RULES (RULE comandos (BLOCK (ALT consola))) (RULE consola (BLOCK (ALT CD RUTA ENTER {
+            System.out.println($CD.text +" "+ $RUTA.text);
+        }))) (RULE CD (BLOCK (ALT 'cd'))) (RULE RUTA (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9-])))))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 15:33:41:239 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR comandos (RULES (RULE comandos (BLOCK (ALT consola))) (RULE consola (BLOCK (ALT CD RUTA ENTER {
+            System.out.println($CD.text +" "+ $RUTA.text);
+        })))))
+2020-04-27 15:33:41:240 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR comandosLexer (RULES (RULE CD (BLOCK (ALT 'cd'))) (RULE RUTA (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9-])))))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 15:33:41:601 semantics LogManager.java:25 tokens={EOF=-1, CD=1, RUTA=2, ENTER=3, ESPACIOS=4}
+2020-04-27 15:33:41:601 semantics LogManager.java:25 strings={'cd'=1}
+2020-04-27 15:33:41:642 action-translator LogManager.java:25 translate 
+            System.out.println($CD.text +" "+ $RUTA.text);
+        
+2020-04-27 15:33:41:643 action-translator LogManager.java:25 qattr [@-1,34:35='CD',<0>,7:32].[@-1,37:40='text',<0>,7:35]
+2020-04-27 15:33:41:643 action-translator LogManager.java:25 qattr [@-1,49:52='RUTA',<0>,7:47].[@-1,54:57='text',<0>,7:52]

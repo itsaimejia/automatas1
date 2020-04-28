@@ -1,0 +1,94 @@
+2020-04-27 21:34:08:594 grammar LogManager.java:25 before: (COMBINED_GRAMMAR variables (RULES (RULE variables (BLOCK (ALT estructura))) (RULE estructura (BLOCK (ALT INT NOMBRE {
+                ValidateVar v = new ValidateVar($INT.text, $NOMBRE.text);
+                v.valid();
+            }) (ALT FLOAT NOMBRE {
+                ValidateVar v = new ValidateVar($FLOAT.text, $NOMBRE.text);
+                v.valid();
+            }) (ALT CHAR NOMBRE {
+                ValidateVar v = new ValidateVar($CHAR.text, $NOMBRE.text);
+                v.valid();
+            }) (ALT BOOLEAN NOMBRE {
+                ValidateVar v = new ValidateVar($BOOLEAN.text, $NOMBRE.text);
+                v.valid();
+            }) (ALT DOUBLE NOMBRE {
+                ValidateVar v = new ValidateVar($DOUBLE.text, $NOMBRE.text);
+                v.valid();
+            }) (ALT ERROR ERROR {
+                System.out.println("ERROR");
+            }))) (RULE ERROR (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9])))))) (RULE INT (BLOCK (ALT 'int'))) (RULE CHAR (BLOCK (ALT 'char'))) (RULE FLOAT (BLOCK (ALT 'float'))) (RULE BOOLEAN (BLOCK (ALT 'boolean'))) (RULE DOUBLE (BLOCK (ALT 'double'))) (RULE NOMBRE (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9_]))) PC))) (RULE PC (BLOCK (ALT ';'))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 21:34:08:608 grammar LogManager.java:25 after: (COMBINED_GRAMMAR variables (RULES (RULE variables (BLOCK (ALT estructura))) (RULE estructura (BLOCK (ALT INT NOMBRE {
+                ValidateVar v = new ValidateVar($INT.text, $NOMBRE.text);
+                v.valid();
+            }) (ALT FLOAT NOMBRE {
+                ValidateVar v = new ValidateVar($FLOAT.text, $NOMBRE.text);
+                v.valid();
+            }) (ALT CHAR NOMBRE {
+                ValidateVar v = new ValidateVar($CHAR.text, $NOMBRE.text);
+                v.valid();
+            }) (ALT BOOLEAN NOMBRE {
+                ValidateVar v = new ValidateVar($BOOLEAN.text, $NOMBRE.text);
+                v.valid();
+            }) (ALT DOUBLE NOMBRE {
+                ValidateVar v = new ValidateVar($DOUBLE.text, $NOMBRE.text);
+                v.valid();
+            }) (ALT ERROR ERROR {
+                System.out.println("ERROR");
+            }))) (RULE ERROR (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9])))))) (RULE INT (BLOCK (ALT 'int'))) (RULE CHAR (BLOCK (ALT 'char'))) (RULE FLOAT (BLOCK (ALT 'float'))) (RULE BOOLEAN (BLOCK (ALT 'boolean'))) (RULE DOUBLE (BLOCK (ALT 'double'))) (RULE NOMBRE (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9_]))) PC))) (RULE PC (BLOCK (ALT ';'))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 21:34:08:630 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR variables (RULES (RULE variables (BLOCK (ALT estructura))) (RULE estructura (BLOCK (ALT INT NOMBRE {
+                ValidateVar v = new ValidateVar($INT.text, $NOMBRE.text);
+                v.valid();
+            }) (ALT FLOAT NOMBRE {
+                ValidateVar v = new ValidateVar($FLOAT.text, $NOMBRE.text);
+                v.valid();
+            }) (ALT CHAR NOMBRE {
+                ValidateVar v = new ValidateVar($CHAR.text, $NOMBRE.text);
+                v.valid();
+            }) (ALT BOOLEAN NOMBRE {
+                ValidateVar v = new ValidateVar($BOOLEAN.text, $NOMBRE.text);
+                v.valid();
+            }) (ALT DOUBLE NOMBRE {
+                ValidateVar v = new ValidateVar($DOUBLE.text, $NOMBRE.text);
+                v.valid();
+            }) (ALT ERROR ERROR {
+                System.out.println("ERROR");
+            })))))
+2020-04-27 21:34:08:630 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR variablesLexer (RULES (RULE ERROR (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9])))))) (RULE INT (BLOCK (ALT 'int'))) (RULE CHAR (BLOCK (ALT 'char'))) (RULE FLOAT (BLOCK (ALT 'float'))) (RULE BOOLEAN (BLOCK (ALT 'boolean'))) (RULE DOUBLE (BLOCK (ALT 'double'))) (RULE NOMBRE (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9_]))) PC))) (RULE PC (BLOCK (ALT ';'))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 21:34:08:958 semantics LogManager.java:25 tokens={EOF=-1, ERROR=1, INT=2, CHAR=3, FLOAT=4, BOOLEAN=5, DOUBLE=6, NOMBRE=7, PC=8, ENTER=9, ESPACIOS=10}
+2020-04-27 21:34:08:958 semantics LogManager.java:25 strings={'int'=2, 'char'=3, 'float'=4, 'boolean'=5, 'double'=6, ';'=8}
+2020-04-27 21:34:08:968 LL1 LogManager.java:25 
+DECISION 0 in rule estructura
+2020-04-27 21:34:08:971 LL1 LogManager.java:25 look=[2, 4, 3, 5, 6, 1]
+2020-04-27 21:34:08:971 LL1 LogManager.java:25 LL(1)? true
+2020-04-27 21:34:08:993 action-translator LogManager.java:25 translate 
+                ValidateVar v = new ValidateVar($INT.text, $NOMBRE.text);
+                v.valid();
+            
+2020-04-27 21:34:08:994 action-translator LogManager.java:25 qattr [@-1,51:53='INT',<0>,11:49].[@-1,55:58='text',<0>,11:53]
+2020-04-27 21:34:08:995 action-translator LogManager.java:25 qattr [@-1,62:67='NOMBRE',<0>,11:60].[@-1,69:72='text',<0>,11:67]
+2020-04-27 21:34:08:995 action-translator LogManager.java:25 translate 
+                ValidateVar v = new ValidateVar($FLOAT.text, $NOMBRE.text);
+                v.valid();
+            
+2020-04-27 21:34:08:995 action-translator LogManager.java:25 qattr [@-1,51:55='FLOAT',<0>,17:49].[@-1,57:60='text',<0>,17:55]
+2020-04-27 21:34:08:996 action-translator LogManager.java:25 qattr [@-1,64:69='NOMBRE',<0>,17:62].[@-1,71:74='text',<0>,17:69]
+2020-04-27 21:34:08:996 action-translator LogManager.java:25 translate 
+                ValidateVar v = new ValidateVar($CHAR.text, $NOMBRE.text);
+                v.valid();
+            
+2020-04-27 21:34:08:997 action-translator LogManager.java:25 qattr [@-1,51:54='CHAR',<0>,23:49].[@-1,56:59='text',<0>,23:54]
+2020-04-27 21:34:08:997 action-translator LogManager.java:25 qattr [@-1,63:68='NOMBRE',<0>,23:61].[@-1,70:73='text',<0>,23:68]
+2020-04-27 21:34:08:997 action-translator LogManager.java:25 translate 
+                ValidateVar v = new ValidateVar($BOOLEAN.text, $NOMBRE.text);
+                v.valid();
+            
+2020-04-27 21:34:08:998 action-translator LogManager.java:25 qattr [@-1,51:57='BOOLEAN',<0>,29:49].[@-1,59:62='text',<0>,29:57]
+2020-04-27 21:34:08:998 action-translator LogManager.java:25 qattr [@-1,66:71='NOMBRE',<0>,29:64].[@-1,73:76='text',<0>,29:71]
+2020-04-27 21:34:08:998 action-translator LogManager.java:25 translate 
+                ValidateVar v = new ValidateVar($DOUBLE.text, $NOMBRE.text);
+                v.valid();
+            
+2020-04-27 21:34:08:998 action-translator LogManager.java:25 qattr [@-1,51:56='DOUBLE',<0>,35:49].[@-1,58:61='text',<0>,35:56]
+2020-04-27 21:34:08:999 action-translator LogManager.java:25 qattr [@-1,65:70='NOMBRE',<0>,35:63].[@-1,72:75='text',<0>,35:70]
+2020-04-27 21:34:08:999 action-translator LogManager.java:25 translate 
+                System.out.println("ERROR");
+            

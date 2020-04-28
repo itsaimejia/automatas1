@@ -1,0 +1,50 @@
+2020-04-27 15:47:41:116 grammar LogManager.java:25 before: (COMBINED_GRAMMAR comandos (RULES (RULE comandos (BLOCK (ALT consola))) (RULE consola (BLOCK (ALT CD RUTA ENTER {
+            System.out.println("El comando cd se utiliza para acceder a directorios dentro de los SO");
+            System.out.println("El comando que usted ingreso es: "+$CD.text+" "+$RUTA.text);
+            System.out.println($CD.text +" "+ $RUTA.text);
+        }) (ALT DIR ENTER {
+            System.out.println("El comando lista el contenido del directorio o carpeta donde te encuentras, mostrando todas las subcarpetas o archivos que tiene. Con este comando podrás saber si el archivo que buscas está ahí o a qué subcarpeta navegar.");
+            System.out.println("El comando que usted ingreso es: "+$DIR.text);
+            System.out.println($DIR.text);
+        }))) (RULE CD (BLOCK (ALT 'cd'))) (RULE DIR (BLOCK (ALT 'dir'))) (RULE RUTA (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9-])))))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 15:47:41:129 grammar LogManager.java:25 after: (COMBINED_GRAMMAR comandos (RULES (RULE comandos (BLOCK (ALT consola))) (RULE consola (BLOCK (ALT CD RUTA ENTER {
+            System.out.println("El comando cd se utiliza para acceder a directorios dentro de los SO");
+            System.out.println("El comando que usted ingreso es: "+$CD.text+" "+$RUTA.text);
+            System.out.println($CD.text +" "+ $RUTA.text);
+        }) (ALT DIR ENTER {
+            System.out.println("El comando lista el contenido del directorio o carpeta donde te encuentras, mostrando todas las subcarpetas o archivos que tiene. Con este comando podrás saber si el archivo que buscas está ahí o a qué subcarpeta navegar.");
+            System.out.println("El comando que usted ingreso es: "+$DIR.text);
+            System.out.println($DIR.text);
+        }))) (RULE CD (BLOCK (ALT 'cd'))) (RULE DIR (BLOCK (ALT 'dir'))) (RULE RUTA (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9-])))))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 15:47:41:154 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR comandos (RULES (RULE comandos (BLOCK (ALT consola))) (RULE consola (BLOCK (ALT CD RUTA ENTER {
+            System.out.println("El comando cd se utiliza para acceder a directorios dentro de los SO");
+            System.out.println("El comando que usted ingreso es: "+$CD.text+" "+$RUTA.text);
+            System.out.println($CD.text +" "+ $RUTA.text);
+        }) (ALT DIR ENTER {
+            System.out.println("El comando lista el contenido del directorio o carpeta donde te encuentras, mostrando todas las subcarpetas o archivos que tiene. Con este comando podrás saber si el archivo que buscas está ahí o a qué subcarpeta navegar.");
+            System.out.println("El comando que usted ingreso es: "+$DIR.text);
+            System.out.println($DIR.text);
+        })))))
+2020-04-27 15:47:41:154 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR comandosLexer (RULES (RULE CD (BLOCK (ALT 'cd'))) (RULE DIR (BLOCK (ALT 'dir'))) (RULE RUTA (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9-])))))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE ESPACIOS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-27 15:47:41:528 semantics LogManager.java:25 tokens={EOF=-1, CD=1, DIR=2, RUTA=3, ENTER=4, ESPACIOS=5}
+2020-04-27 15:47:41:528 semantics LogManager.java:25 strings={'cd'=1, 'dir'=2}
+2020-04-27 15:47:41:536 LL1 LogManager.java:25 
+DECISION 0 in rule consola
+2020-04-27 15:47:41:541 LL1 LogManager.java:25 look=[1, 2]
+2020-04-27 15:47:41:541 LL1 LogManager.java:25 LL(1)? true
+2020-04-27 15:47:41:563 action-translator LogManager.java:25 translate 
+            System.out.println("El comando cd se utiliza para acceder a directorios dentro de los SO");
+            System.out.println("El comando que usted ingreso es: "+$CD.text+" "+$RUTA.text);
+            System.out.println($CD.text +" "+ $RUTA.text);
+        
+2020-04-27 15:47:41:563 action-translator LogManager.java:25 qattr [@-1,175:176='CD',<0>,8:68].[@-1,178:181='text',<0>,8:71]
+2020-04-27 15:47:41:564 action-translator LogManager.java:25 qattr [@-1,188:191='RUTA',<0>,8:81].[@-1,193:196='text',<0>,8:86]
+2020-04-27 15:47:41:564 action-translator LogManager.java:25 qattr [@-1,233:234='CD',<0>,9:32].[@-1,236:239='text',<0>,9:35]
+2020-04-27 15:47:41:565 action-translator LogManager.java:25 qattr [@-1,248:251='RUTA',<0>,9:47].[@-1,253:256='text',<0>,9:52]
+2020-04-27 15:47:41:565 action-translator LogManager.java:25 translate 
+            System.out.println("El comando lista el contenido del directorio o carpeta donde te encuentras, mostrando todas las subcarpetas o archivos que tiene. Con este comando podrás saber si el archivo que buscas está ahí o a qué subcarpeta navegar.");
+            System.out.println("El comando que usted ingreso es: "+$DIR.text);
+            System.out.println($DIR.text);
+        
+2020-04-27 15:47:41:565 action-translator LogManager.java:25 qattr [@-1,332:334='DIR',<0>,15:68].[@-1,336:339='text',<0>,15:72]
+2020-04-27 15:47:41:569 action-translator LogManager.java:25 qattr [@-1,376:378='DIR',<0>,16:32].[@-1,380:383='text',<0>,16:36]
