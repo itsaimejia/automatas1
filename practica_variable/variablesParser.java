@@ -171,9 +171,11 @@ public class variablesParser extends Parser {
 				setState(7);
 				((EstructuraContext)_localctx).NOMBRE = match(NOMBRE);
 
-				                System.out.println((((EstructuraContext)_localctx).INT!=null?((EstructuraContext)_localctx).INT.getText():null));
 				                ValidateVar v = new ValidateVar((((EstructuraContext)_localctx).INT!=null?((EstructuraContext)_localctx).INT.getText():null), (((EstructuraContext)_localctx).NOMBRE!=null?((EstructuraContext)_localctx).NOMBRE.getText():null));
-				                v.valid();
+				                if(v.valid())
+				                    System.out.println("Declaracion sin errores");
+				                else
+				                    System.out.println("ERROR");
 				            
 				}
 				break;
@@ -186,7 +188,10 @@ public class variablesParser extends Parser {
 				((EstructuraContext)_localctx).NOMBRE = match(NOMBRE);
 
 				                ValidateVar v = new ValidateVar((((EstructuraContext)_localctx).FLOAT!=null?((EstructuraContext)_localctx).FLOAT.getText():null), (((EstructuraContext)_localctx).NOMBRE!=null?((EstructuraContext)_localctx).NOMBRE.getText():null));
-				                v.valid();
+				                if(v.valid())
+				                    System.out.println("Declaracion sin errores");
+				                else
+				                    System.out.println("ERROR");
 				            
 				}
 				break;
@@ -199,7 +204,10 @@ public class variablesParser extends Parser {
 				((EstructuraContext)_localctx).NOMBRE = match(NOMBRE);
 
 				                ValidateVar v = new ValidateVar((((EstructuraContext)_localctx).CHAR!=null?((EstructuraContext)_localctx).CHAR.getText():null), (((EstructuraContext)_localctx).NOMBRE!=null?((EstructuraContext)_localctx).NOMBRE.getText():null));
-				                v.valid();
+				                if(v.valid())
+				                    System.out.println("Declaracion sin errores");
+				                else
+				                    System.out.println("ERROR");
 				            
 				}
 				break;
@@ -212,7 +220,10 @@ public class variablesParser extends Parser {
 				((EstructuraContext)_localctx).NOMBRE = match(NOMBRE);
 
 				                ValidateVar v = new ValidateVar((((EstructuraContext)_localctx).BOOLEAN!=null?((EstructuraContext)_localctx).BOOLEAN.getText():null), (((EstructuraContext)_localctx).NOMBRE!=null?((EstructuraContext)_localctx).NOMBRE.getText():null));
-				                v.valid();
+				                if(v.valid())
+				                    System.out.println("Declaracion sin errores");
+				                else
+				                    System.out.println("ERROR");
 				            
 				}
 				break;
@@ -225,7 +236,10 @@ public class variablesParser extends Parser {
 				((EstructuraContext)_localctx).NOMBRE = match(NOMBRE);
 
 				                ValidateVar v = new ValidateVar((((EstructuraContext)_localctx).DOUBLE!=null?((EstructuraContext)_localctx).DOUBLE.getText():null), (((EstructuraContext)_localctx).NOMBRE!=null?((EstructuraContext)_localctx).NOMBRE.getText():null));
-				                v.valid();
+				                if(v.valid())
+				                    System.out.println("Declaracion sin errores");
+				                else
+				                    System.out.println("ERROR");
 				            
 				}
 				break;

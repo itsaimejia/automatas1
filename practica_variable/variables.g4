@@ -8,32 +8,47 @@ variables   : estructura;
 estructura  : 
             INT NOMBRE
             {
-                ValidateVar v = new ValidateVar($INT.text, $NOMBRE.text);
-                v.valid();
+                ValidateVar v = new ValidateVar($NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
             } 
             |
             FLOAT NOMBRE
             {
-                ValidateVar v = new ValidateVar($FLOAT.text, $NOMBRE.text);
-                v.valid();
+                ValidateVar v = new ValidateVar($NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
             } 
             |
             CHAR NOMBRE
             {
-                ValidateVar v = new ValidateVar($CHAR.text, $NOMBRE.text);
-                v.valid();
+                ValidateVar v = new ValidateVar($NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
             } 
             |
             BOOLEAN NOMBRE
             {
-                ValidateVar v = new ValidateVar($BOOLEAN.text, $NOMBRE.text);
-                v.valid();
+                ValidateVar v = new ValidateVar($NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
             } 
             |
             DOUBLE NOMBRE
             {
-                ValidateVar v = new ValidateVar($DOUBLE.text, $NOMBRE.text);
-                v.valid();
+                ValidateVar v = new ValidateVar($NOMBRE.text);
+                if(v.valid())
+                    System.out.println("Declaracion sin errores");
+                else
+                    System.out.println("ERROR");
             }
             |
             {
