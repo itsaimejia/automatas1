@@ -1,0 +1,20 @@
+2020-04-29 19:24:48:435 grammar LogManager.java:25 before: (COMBINED_GRAMMAR usuarios (RULES (RULE nombre_usuario (BLOCK (ALT ARROBA (= u USERNAME) ENTER {
+                    VerifyUser user= new VerifyUser($u.text);
+                    user.valid();
+                }))) (RULE ARROBA (BLOCK (ALT '@'))) (RULE USERNAME (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9_])))))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-29 19:24:48:448 grammar LogManager.java:25 after: (COMBINED_GRAMMAR usuarios (RULES (RULE nombre_usuario (BLOCK (ALT ARROBA (= u USERNAME) ENTER {
+                    VerifyUser user= new VerifyUser($u.text);
+                    user.valid();
+                }))) (RULE ARROBA (BLOCK (ALT '@'))) (RULE USERNAME (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9_])))))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-29 19:24:48:474 grammar LogManager.java:25 after extract implicit lexer =(COMBINED_GRAMMAR usuarios (RULES (RULE nombre_usuario (BLOCK (ALT ARROBA (= u USERNAME) ENTER {
+                    VerifyUser user= new VerifyUser($u.text);
+                    user.valid();
+                })))))
+2020-04-29 19:24:48:474 grammar LogManager.java:25 lexer =(LEXER_GRAMMAR usuariosLexer (RULES (RULE ARROBA (BLOCK (ALT '@'))) (RULE USERNAME (BLOCK (ALT (+ (BLOCK (ALT [a-zA-Z0-9_])))))) (RULE ENTER (BLOCK (ALT [\r\n]))) (RULE WS (BLOCK (LEXER_ALT_ACTION (ALT [ ]) skip)))))
+2020-04-29 19:24:48:822 semantics LogManager.java:25 tokens={EOF=-1, ARROBA=1, USERNAME=2, ENTER=3, WS=4}
+2020-04-29 19:24:48:822 semantics LogManager.java:25 strings={'@'=1}
+2020-04-29 19:24:48:843 action-translator LogManager.java:25 translate 
+                    VerifyUser user= new VerifyUser($u.text);
+                    user.valid();
+                
+2020-04-29 19:24:48:846 action-translator LogManager.java:25 qattr [@-1,55:55='u',<0>,15:53].[@-1,57:60='text',<0>,15:55]
