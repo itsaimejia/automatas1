@@ -130,12 +130,7 @@ public class variablesParser extends Parser {
 	}
 
 	public static class EstructuraContext extends ParserRuleContext {
-		public Token INT;
 		public Token NOMBRE;
-		public Token FLOAT;
-		public Token CHAR;
-		public Token BOOLEAN;
-		public Token DOUBLE;
 		public TerminalNode INT() { return getToken(variablesParser.INT, 0); }
 		public TerminalNode NOMBRE() { return getToken(variablesParser.NOMBRE, 0); }
 		public TerminalNode FLOAT() { return getToken(variablesParser.FLOAT, 0); }
@@ -167,11 +162,11 @@ public class variablesParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(6);
-				((EstructuraContext)_localctx).INT = match(INT);
+				match(INT);
 				setState(7);
 				((EstructuraContext)_localctx).NOMBRE = match(NOMBRE);
 
-				                ValidateVar v = new ValidateVar((((EstructuraContext)_localctx).INT!=null?((EstructuraContext)_localctx).INT.getText():null), (((EstructuraContext)_localctx).NOMBRE!=null?((EstructuraContext)_localctx).NOMBRE.getText():null));
+				                ValidateVar v = new ValidateVar((((EstructuraContext)_localctx).NOMBRE!=null?((EstructuraContext)_localctx).NOMBRE.getText():null));
 				                if(v.valid())
 				                    System.out.println("Declaracion sin errores");
 				                else
@@ -183,11 +178,11 @@ public class variablesParser extends Parser {
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(9);
-				((EstructuraContext)_localctx).FLOAT = match(FLOAT);
+				match(FLOAT);
 				setState(10);
 				((EstructuraContext)_localctx).NOMBRE = match(NOMBRE);
 
-				                ValidateVar v = new ValidateVar((((EstructuraContext)_localctx).FLOAT!=null?((EstructuraContext)_localctx).FLOAT.getText():null), (((EstructuraContext)_localctx).NOMBRE!=null?((EstructuraContext)_localctx).NOMBRE.getText():null));
+				                ValidateVar v = new ValidateVar((((EstructuraContext)_localctx).NOMBRE!=null?((EstructuraContext)_localctx).NOMBRE.getText():null));
 				                if(v.valid())
 				                    System.out.println("Declaracion sin errores");
 				                else
@@ -199,11 +194,11 @@ public class variablesParser extends Parser {
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(12);
-				((EstructuraContext)_localctx).CHAR = match(CHAR);
+				match(CHAR);
 				setState(13);
 				((EstructuraContext)_localctx).NOMBRE = match(NOMBRE);
 
-				                ValidateVar v = new ValidateVar((((EstructuraContext)_localctx).CHAR!=null?((EstructuraContext)_localctx).CHAR.getText():null), (((EstructuraContext)_localctx).NOMBRE!=null?((EstructuraContext)_localctx).NOMBRE.getText():null));
+				                ValidateVar v = new ValidateVar((((EstructuraContext)_localctx).NOMBRE!=null?((EstructuraContext)_localctx).NOMBRE.getText():null));
 				                if(v.valid())
 				                    System.out.println("Declaracion sin errores");
 				                else
@@ -215,11 +210,11 @@ public class variablesParser extends Parser {
 				enterOuterAlt(_localctx, 4);
 				{
 				setState(15);
-				((EstructuraContext)_localctx).BOOLEAN = match(BOOLEAN);
+				match(BOOLEAN);
 				setState(16);
 				((EstructuraContext)_localctx).NOMBRE = match(NOMBRE);
 
-				                ValidateVar v = new ValidateVar((((EstructuraContext)_localctx).BOOLEAN!=null?((EstructuraContext)_localctx).BOOLEAN.getText():null), (((EstructuraContext)_localctx).NOMBRE!=null?((EstructuraContext)_localctx).NOMBRE.getText():null));
+				                ValidateVar v = new ValidateVar((((EstructuraContext)_localctx).NOMBRE!=null?((EstructuraContext)_localctx).NOMBRE.getText():null));
 				                if(v.valid())
 				                    System.out.println("Declaracion sin errores");
 				                else
@@ -231,11 +226,11 @@ public class variablesParser extends Parser {
 				enterOuterAlt(_localctx, 5);
 				{
 				setState(18);
-				((EstructuraContext)_localctx).DOUBLE = match(DOUBLE);
+				match(DOUBLE);
 				setState(19);
 				((EstructuraContext)_localctx).NOMBRE = match(NOMBRE);
 
-				                ValidateVar v = new ValidateVar((((EstructuraContext)_localctx).DOUBLE!=null?((EstructuraContext)_localctx).DOUBLE.getText():null), (((EstructuraContext)_localctx).NOMBRE!=null?((EstructuraContext)_localctx).NOMBRE.getText():null));
+				                ValidateVar v = new ValidateVar((((EstructuraContext)_localctx).NOMBRE!=null?((EstructuraContext)_localctx).NOMBRE.getText():null));
 				                if(v.valid())
 				                    System.out.println("Declaracion sin errores");
 				                else
